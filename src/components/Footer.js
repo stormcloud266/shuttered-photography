@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = (props) => (
   <section className="Footer">
@@ -6,8 +7,18 @@ const Footer = (props) => (
       <div className="Footer__text-container">
         <p className="Footer__title title-underline">Contact</p>
         <div className="Footer__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure harum magnam quam quis atque temporibus incidunt adipisci quidem velit quos.</div>
+        <div className="Footer__contact-info">
+          <span>Phone:</span>
+          <p>(123) 456 - 7890</p>
+        </div>
+        <div className="Footer__contact-info">
+          <span>Email:</span>
+          <p>photography@exampl.com</p>
+        </div>
         <div className="Footer__icons-container">
-
+          <FontAwesomeIcon icon={['fab', 'twitter']} />
+          <FontAwesomeIcon icon={['fab', 'instagram']} />
+          <FontAwesomeIcon icon={['fab', 'flickr']} />
         </div>
       </div>
 

@@ -8,6 +8,10 @@
   height: 400px;
   display: flex;
   align-items: center;
+  &:last-of-type {
+    margin-bottom: 30rem;
+
+  }
 
   &__text-container {
     max-width: 50%;

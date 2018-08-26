@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+
 import '../styles/styles.scss';
+
+library.add(fab)
 
 const Layout = ({ children, data }) => (
   <StaticQuery

@@ -1,13 +1,26 @@
+@mixin whenMedium() {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+@mixin whenSmall() {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
 
 $color-body: #141311;
 $color-gray: #1C1B19;
 $color-gray-l: #32302d;
-$color-accent: #edda5c;
+$color-accent: #e7a766;
 $color-text: #EFEAE2;
 $color-text-m: #beb8b0;
 
 $sans: 'Open Sans', sans-serif;
 $serif: 'Playfair Display', serif;
+
+
 
 .wrapper {
   max-width: 112rem;
