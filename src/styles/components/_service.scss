@@ -1,0 +1,33 @@
+.Service {
+  margin-top: 20rem;
+  margin-bottom: 40rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: $color-gray;
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+
+  &__text-container {
+    max-width: 50%;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 560px;
+  }
+  &--img-left {
+    justify-content: flex-end;
+    .Service__img {
+      left: 80px;
+      right: auto;
+    }
+  }
+}

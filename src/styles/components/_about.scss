@@ -1,0 +1,26 @@
+.About {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+  text-align: center;
+
+  &__title {
+    font-size: 3.2rem;
+    font-family: $serif;
+    margin-bottom: 20px;
+  }
+  &__body {
+    max-width: 600px;
+    color: $color-text-m;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  &__link {
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    padding: 16px 20px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}

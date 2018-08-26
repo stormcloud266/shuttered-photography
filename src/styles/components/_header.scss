@@ -1,0 +1,55 @@
+.Header {
+  height: 100vh;
+  width: 100vw;
+  background-image:
+  linear-gradient(rgba($color-body, .85), rgba($color-body, .85)),
+   url('https://images.unsplash.com/photo-1526309957074-3b94bb318dcb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6174a06ff1e65a3d6b60696420a05fe7&auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    top: 0; right: 0; left: 0;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      list-style: none;
+      margin-left: 4rem;
+    }
+    a {
+      color: $color-text-m;
+    }
+  }
+  &__logo {
+    font-family: $serif;
+    color: $color-accent;
+    font-size: 3.2rem;
+  }
+
+  &__text-container {
+    text-align: center;
+  }
+  &__title {
+    font-family: $serif;
+    font-size: 6.8rem;
+  }
+  &__subtitle {
+    font-size: 2.4rem;
+    color: $color-text-m;
+    margin-top: 10px;
+  }
+}

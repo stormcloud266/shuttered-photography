@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: $sans;
+  background: $color-body;
+  color: $color-text;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+}
