@@ -42,6 +42,7 @@
   @include whenSmall {
     &__grid {
       display: flex;
+      flex-direction: column;
     }
 
   }

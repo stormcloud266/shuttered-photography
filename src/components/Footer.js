@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = (props) => (
-  <section className="Footer">
+  <section className="Footer" id="contact">
     <div className="Footer__inner wrapper">
       <div className="Footer__text-container">
         <p className="Footer__title title-underline">Contact</p>
@@ -13,7 +13,7 @@ const Footer = (props) => (
         </div>
         <div className="Footer__contact-info">
           <span>Email:</span>
-          <p>photography@exampl.com</p>
+          <p>photography@example.com</p>
         </div>
         <div className="Footer__icons-container">
           <FontAwesomeIcon icon={['fab', 'twitter']} />
@@ -35,7 +35,7 @@ const Footer = (props) => (
           <label htmlFor="">Message</label>
           <textarea name="" id="" cols="" rows=""></textarea>
         </div>
-        <button className="Footer__button">Send Message</button>
+        <button className="Footer__button button">Send Message</button>
       </form>
     </div>
   </section>

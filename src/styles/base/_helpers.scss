@@ -13,7 +13,7 @@
 $color-body: #141311;
 $color-gray: #1C1B19;
 $color-gray-l: #32302d;
-$color-accent: #e7a766;
+$color-accent: #e7bb66;
 $color-text: #EFEAE2;
 $color-text-m: #beb8b0;
 
@@ -69,5 +69,12 @@ $serif: 'Playfair Display', serif;
     position: absolute;
     left: 2px;
     bottom: -10px;
+  }
+}
+
+.button {
+  transition: all .3s;
+  &:hover {
+    background: rgba($color-accent, .03);
   }
 }

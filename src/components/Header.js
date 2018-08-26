@@ -1,5 +1,6 @@
 import React from 'react'
-// import ReactDOM from 'react-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 class Header extends React.Component {
   state = {
@@ -18,23 +19,15 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="Header">
+      <header className="Header" id="top">
         <nav className="Header__nav">
           <div className="Header__nav-inner wrapper">
-            <p className="Header__logo">Shooter</p>
+            <p className="Header__logo">Shuttered</p>
             <ul className="desktop-nav">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
-              </li>
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="#contacts">Contact</a>
-              </li>
+              <li><AnchorLink href='#about'>About</AnchorLink></li>
+              <li><AnchorLink href='#services' offset='200'>Services</AnchorLink></li>
+              <li><AnchorLink href='#portfolio' offset='50'>Portfolio</AnchorLink></li>
+              <li><AnchorLink href='#contact'>Contact</AnchorLink></li>
             </ul>
             <div className="mobile-nav">
 
@@ -53,11 +46,13 @@ class Header extends React.Component {
 
               <div className="mobile-nav__menu-container">
                 <ul className="mobile-nav__menu">
-                  <li><a href="#about" onClick={this.closeMenu}>Home</a></li>
-                  <li><a href="#about" onClick={this.closeMenu}>About</a></li>
-                  <li><a href="#about" onClick={this.closeMenu}>Services</a></li>
-                  <li><a href="#about" onClick={this.closeMenu}>Portfolio</a></li>
-                  <li><a href="#about" onClick={this.closeMenu}>Contact</a></li>
+
+                  <li><AnchorLink href='#top' onClick={this.closeMenu} offset='100'>Home</AnchorLink></li>
+                  <li><AnchorLink href='#about' onClick={this.closeMenu} offset='100'>About</AnchorLink></li>
+                  <li><AnchorLink href='#services' onClick={this.closeMenu} offset='120'>Services</AnchorLink></li>
+                  <li><AnchorLink href='#portfolio' onClick={this.closeMenu} offset='100'>Portfolio</AnchorLink></li>
+                  <li><AnchorLink href='#contact' onClick={this.closeMenu} offset='100'>Contact</AnchorLink></li>
+
                 </ul>
               </div>
 
@@ -65,7 +60,7 @@ class Header extends React.Component {
           </div>
         </nav>
         <div className="Header__text-container">
-          <p className="Header__title">Shooter</p>
+          <p className="Header__title">Shuttered</p>
           <div className="divider"></div>
           <p className="Header__subtitle">Photography Studio</p>
         </div>

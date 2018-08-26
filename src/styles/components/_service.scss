@@ -1,13 +1,20 @@
+.Services {
+  padding: 0 20px;
+  @include whenMedium {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
+
 .Service {
   margin-top: 20rem;
   margin-bottom: 40rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   background: $color-gray;
   position: relative;
   height: 400px;
   display: flex;
   align-items: center;
+
   &:last-of-type {
     margin-bottom: 30rem;
 
@@ -32,6 +39,47 @@
     .Service__img {
       left: 80px;
       right: auto;
+    }
+  }
+
+  @include whenMedium {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    display: block;
+    height: auto;
+    background: none;
+    padding: 0;
+    &:last-of-type {
+      margin-bottom: 16rem;
+
+    }
+
+    &__img {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      height: auto;
+      width: 100%;
+      z-index: 1;
+      transform: translateY(0);
+      display: block;
+    }
+    &__text-container {
+      position: absolute;
+      max-width: 100%;
+      background: rgba($color-gray, .9);
+      padding: 4rem 3rem;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+
+    }
+    &--img-left {
+      justify-content: center;
+      .Service__img {
+        left: 0;
+        right: 0;
+      }
     }
   }
 }

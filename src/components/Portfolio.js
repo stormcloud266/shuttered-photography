@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Portfolio = () => (
-  <div className="Portfolio wrapper">
+  <div className="Portfolio wrapper" id="portfolio">
     <p className="Portfolio__title">Portfolio</p>
     <div className="divider"></div>
     <div className="Portfolio__grid">

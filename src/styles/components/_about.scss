@@ -23,4 +23,8 @@
     font-size: 1.6rem;
     line-height: 1;
   }
+  @include whenMedium {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }

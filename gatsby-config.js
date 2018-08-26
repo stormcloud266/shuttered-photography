@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Shuttered Photography',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -8,11 +8,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Shuttered Photography',
+        short_name: 'Shuttered',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#141311',
+        theme_color: '#141311',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
@@ -26,5 +26,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-netlify'
   ],
 }
