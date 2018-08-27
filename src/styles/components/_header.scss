@@ -3,7 +3,7 @@
   width: 100vw;
   background-image:
   linear-gradient(rgba($color-body, .85), rgba($color-body, .85)),
-   url('https://images.unsplash.com/photo-1526309957074-3b94bb318dcb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6174a06ff1e65a3d6b60696420a05fe7&auto=format&fit=crop&w=1400&q=80');
+   url('../images/header.jpeg');
   background-size: cover;
   background-position: center;
 
@@ -70,6 +70,9 @@
       background: $color-body;
       .desktop-nav {
         display: none;
+      }
+      li {
+        margin-left: 0;
       }
     }
     .mobile-nav {
