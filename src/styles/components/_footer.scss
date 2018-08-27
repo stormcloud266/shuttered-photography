@@ -11,21 +11,14 @@
     flex: 1;
     padding-right: 60px;
   }
-  &__title {
-    margin-bottom: 40px;
-  }
-  &__body {
-    margin-bottom: 20px;
-  }
+  &__title { margin-bottom: 40px; }
+  &__body { margin-bottom: 20px; }
 
   &__contact-info {
     display: flex;
     font-size: 1.7rem;
     color: $color-text-m;
-
-    span {
-      margin-right: 10px;
-    }
+    span { margin-right: 10px; }
   }
   &__icons-container {
     margin-top: 20px;
@@ -35,17 +28,11 @@
       margin-right: 20px;
       transition: color .3s;
       cursor: pointer;
-      &:hover {
-        color: darken($color-accent, 10%);
-      }
+      &:hover { color: darken($color-accent, 10%); }
     }
   }
 
-
-
-  &__form-item {
-    margin-bottom: 20px;
-  }
+  &__form-item { margin-bottom: 20px; }
   &__form {
     flex: 1;
     div:nth-child(1) {
@@ -71,9 +58,7 @@
       color: $color-text;
       font-family: $sans;
     }
-    input {
-      width: 100%;
-    }
+    input { width: 100%; }
     textarea {
       width: 100%;
       resize: none;
@@ -101,9 +86,7 @@
       justify-content: center;
       align-items: center;
     }
-    &__form {
-      margin-top: 8rem;
-    }
+    &__form { margin-top: 8rem; }
     &__text-container {
       padding-right: 0;
       max-width: 430px;
@@ -111,15 +94,12 @@
   }
   @include whenSmall {
 
-    &__inner {
-      flex-direction: column;
-    }
+    &__inner { flex-direction: column; }
     &__form {
       div:nth-child(1), div:nth-child(2) {
         width: 100%;
         padding: 0;
       }
     }
-
   }
 }

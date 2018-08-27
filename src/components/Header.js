@@ -1,5 +1,5 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 class Header extends React.Component {
@@ -67,5 +67,5 @@ class Header extends React.Component {
       </header>
     )
   }
-}
+};
 export default Header;

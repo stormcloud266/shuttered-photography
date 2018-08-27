@@ -74,7 +74,5 @@ $serif: 'Playfair Display', serif;
 
 .button {
   transition: all .3s;
-  &:hover {
-    background: rgba($color-accent, .03);
-  }
+  &:hover { background: rgba($color-accent, .03); }
 }

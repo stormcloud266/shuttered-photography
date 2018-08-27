@@ -24,9 +24,7 @@
       padding-top: 2.4rem;
       padding-bottom: 2.4rem;
     }
-    ul {
-      display: flex;
-    }
+    ul { display: flex; }
     li {
       list-style: none;
       margin-left: 4rem;
@@ -34,9 +32,7 @@
     a {
       color: $color-text-m;
       transition: color .3s;
-      &:hover {
-        color: $color-accent;
-      }
+      &:hover { color: $color-accent; }
     }
   }
   &__logo {
@@ -46,9 +42,7 @@
     line-height: 1;
   }
 
-  &__text-container {
-    text-align: center;
-  }
+  &__text-container { text-align: center; }
   &__title {
     font-family: $serif;
     font-size: 6.8rem;
@@ -59,9 +53,7 @@
     margin-top: 10px;
   }
 
-  .mobile-nav {
-    display: none;
-  }
+  .mobile-nav { display: none; }
 
   @include whenMedium {
 
@@ -71,13 +63,9 @@
       .desktop-nav {
         display: none;
       }
-      li {
-        margin-left: 0;
-      }
+      li { margin-left: 0; }
     }
-    .mobile-nav {
-      display: flex;
-    }
+    .mobile-nav { display: flex; }
   }
 }
 
@@ -121,8 +109,6 @@
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
-    // transition-delay: .6s;
-
     position: fixed;
     top: 78px; right: 0; bottom: 0; left: 0;
     background: $color-body;

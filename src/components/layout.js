@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import headerJPG from '../images/header.jpeg';
 
 import '../styles/styles.scss';
 
-library.add(fab)
+library.add(fab);
 
 const Layout = ({ children, data }) => (
   <StaticQuery
@@ -43,10 +43,10 @@ const Layout = ({ children, data }) => (
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

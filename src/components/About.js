@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => (
   <section className="About wrapper" id="about">
@@ -7,6 +7,6 @@ const About = () => (
     <p className="About__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt esse praesentium, corrupti cum, dolorum eveniet possimus reiciendis porro sapiente mollitia dolore doloribus non, at nobis ipsam? Suscipit iure, quis voluptatem.</p>
     <a href="#contact" className="About__link button">Schedule a Shoot</a>
   </section>
-)
+);
 
 export default About;

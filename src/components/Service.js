@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Service = (props) => (
   <div className="Service wrapper">
@@ -8,6 +8,6 @@ const Service = (props) => (
     </div>
     <img src={props.src} alt="" className="Service__img"/>
   </div>
-)
+);
 
 export default Service;

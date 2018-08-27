@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import gr1 from '../images/gr1.jpeg';
 import gr2 from '../images/gr2.jpeg';
 import gr3 from '../images/gr3.jpeg';
@@ -23,6 +23,6 @@ const Portfolio = () => (
       </div>
     </div>
   </div>
-)
+);
 
 export default Portfolio;

@@ -15,17 +15,10 @@
   display: flex;
   align-items: center;
 
-  &:last-of-type {
-    margin-bottom: 30rem;
+  &:last-of-type { margin-bottom: 30rem; }
 
-  }
-
-  &__text-container {
-    max-width: 50%;
-  }
-  &__title {
-    margin-bottom: 40px;
-  }
+  &__text-container { max-width: 50%; }
+  &__title { margin-bottom: 40px; }
 
   &__img {
     position: absolute;
@@ -49,10 +42,7 @@
     height: auto;
     background: none;
     padding: 0;
-    &:last-of-type {
-      margin-bottom: 16rem;
-
-    }
+    &:last-of-type { margin-bottom: 16rem; }
 
     &__img {
       position: relative;
@@ -72,7 +62,6 @@
       left: 0;
       bottom: 0;
       z-index: 2;
-
     }
     &--img-left {
       justify-content: center;

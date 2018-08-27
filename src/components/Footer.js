@@ -1,5 +1,5 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = (props) => (
   <section className="Footer" id="contact">
@@ -39,6 +39,6 @@ const Footer = (props) => (
       </form>
     </div>
   </section>
-)
+);
 
 export default Footer;

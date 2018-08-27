@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 import Header from '../components/Header';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -15,6 +15,6 @@ const IndexPage = () => (
     <Portfolio />
     <Footer />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
