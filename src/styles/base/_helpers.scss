@@ -74,5 +74,14 @@ $serif: 'Playfair Display', serif;
 
 .button {
   transition: all .3s;
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  padding: 16px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-family: $sans;
+  cursor: pointer;
   &:hover { background: rgba($color-accent, .03); }
 }

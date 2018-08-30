@@ -14,25 +14,20 @@
   height: 400px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   &:last-of-type { margin-bottom: 30rem; }
 
   &__text-container { max-width: 50%; }
   &__title { margin-bottom: 40px; }
-
   &__img {
-    position: absolute;
-    right: 80px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 560px;
+    margin-right: 20px;
+    display: block;
   }
-  &--img-left {
-    justify-content: flex-end;
-    .Service__img {
-      left: 80px;
-      right: auto;
-    }
+
+  &--img-left .Service__img {
+    margin-right: 0;
+    margin-left: 20px;
   }
 
   @include whenMedium {
@@ -42,18 +37,14 @@
     height: auto;
     background: none;
     padding: 0;
+
     &:last-of-type { margin-bottom: 16rem; }
 
-    &__img {
-      position: relative;
-      right: auto;
-      bottom: auto;
-      height: auto;
-      width: 100%;
-      z-index: 1;
-      transform: translateY(0);
-      display: block;
+    .gatsby-image-wrapper {
+      width: 100% !important;
+      display: block !important;
     }
+
     &__text-container {
       position: absolute;
       max-width: 100%;
@@ -65,10 +56,11 @@
     }
     &--img-left {
       justify-content: center;
-      .Service__img {
-        left: 0;
-        right: 0;
-      }
+      .Service__img { margin-left: 0px; }
     }
+  }
+  @include whenSmall {
+    &__text-container { padding: 3rem 2rem; }
+    &__title { margin-bottom: 30px; }
   }
 }

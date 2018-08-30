@@ -1,0 +1,68 @@
+.NewestPosts {
+  // background: darkred;
+  margin-bottom: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-size: 3.2rem;
+    font-family: $serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__container {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .post {
+    flex: 1;
+    margin: 0 10px;
+    background: $color-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 3px solid $color-gray-l;
+    &:hover .post__title {
+      color: $color-accent;
+    }
+    &:hover .post__img {
+      opacity: .8;
+    }
+    &__img {
+      transition: all .3s;
+    }
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      padding: 0 10px;
+      color: $color-text-m;
+      transition: color .3s;
+      margin: 20px 0;
+    }
+  }
+  @include whenMedium {
+    &__container {
+      flex-direction: column;
+      max-width: 460px;
+    }
+    .post {
+      margin: 0 0 50px 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  @include whenSmall{
+    .post {
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

@@ -4,7 +4,7 @@ import gr2 from '../images/gr2.jpeg';
 import gr3 from '../images/gr3.jpeg';
 import gr4 from '../images/gr4.jpeg';
 
-const Portfolio = () => (
+const Portfolio = (data) => (
   <div className="Portfolio wrapper" id="portfolio">
     <p className="Portfolio__title">Portfolio</p>
     <div className="divider"></div>
@@ -20,6 +20,7 @@ const Portfolio = () => (
       </div>
       <div>
         <img src={gr4} alt="" className="Portfolio__img"/>
+
       </div>
     </div>
   </div>

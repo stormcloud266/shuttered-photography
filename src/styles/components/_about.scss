@@ -13,15 +13,6 @@
     color: $color-text-m;
     margin: 20px auto 0;
   }
-  &__link {
-    color: $color-accent;
-    border: 2px solid $color-accent;
-    padding: 16px 20px;
-    margin-top: 20px;
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 1;
-  }
   @include whenMedium {
     padding-top: 10rem;
     padding-bottom: 10rem;
