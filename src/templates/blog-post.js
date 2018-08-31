@@ -1,29 +1,24 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Header from '../components/Header'
-import Img from 'gatsby-image'
-import './blog-post.css'
+import { graphql } from 'gatsby'
+import BlogHeader from '../components/BlogHeader'
+import Footer from '../components/Footer'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div>
-      <Header siteTitle='title' />
-      <Link to='/blog'>Back</Link>
-
-      <hr/>
-      <div className="content">
-        <Img
-          sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
-          style={{
-            maxWidth: 630
-          }}
-        />
-        <h1>{post.frontmatter.title}</h1>
-        <p>posted by {post.frontmatter.author} on {post.frontmatter.date}</p>
+    <div className="BlogPost">
+      <BlogHeader
+        title={post.frontmatter.title}
+        subtitle={post.frontmatter.description}
+        img={post.frontmatter.featuredImage.childImageSharp.sizes.src}
+        blogPost={true}
+      />
+      <div className="BlogPost__content">
         <div className="content__inner" dangerouslySetInnerHTML={{__html: post.html}} />
       </div>
+
+      <Footer />
     </div>
   )
 }
@@ -37,9 +32,10 @@ export const postQuery = graphql`
         title
         author
         date
+        description
         featuredImage {
           childImageSharp{
-             sizes(maxWidth: 630) {
+             sizes(maxWidth: 1000) {
                ...GatsbyImageSharpSizes
            }
          }

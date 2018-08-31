@@ -1,8 +1,8 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-class Header extends React.Component {
+class BlogHeader extends React.Component {
   state = {
     checked: false
   }
@@ -18,17 +18,24 @@ class Header extends React.Component {
   }
 
   render() {
+    const isBlogPost = this.props.blogPost
+    const headerBg = isBlogPost && `linear-gradient(rgba(20,19,17,.9), rgba(20,19,17,.9)), url(${this.props.img})`
+
     return (
-      <header className="Header" id="top">
+      <header
+        className={`Header Header--blog ${this.props.blogPost && 'Header--blog-post'}`}
+        id="top"
+        style={{ backgroundImage: headerBg }}
+      >
         <nav className="Header__nav">
           <div className="Header__nav-inner wrapper">
             <p className="Header__logo">Shuttered</p>
             <ul className="desktop-nav">
-              <li><AnchorLink href='#about'>About</AnchorLink></li>
-              <li><AnchorLink href='#services' offset='200'>Services</AnchorLink></li>
-              <li><AnchorLink href='#portfolio' offset='50'>Portfolio</AnchorLink></li>
-              <li><Link to='/blog'>Blog</Link></li>
+              <li><Link to='/'>Home</Link></li>
+              { isBlogPost ? <li><Link to='/blog'>Blog</Link></li> : <li><AnchorLink href='#latest' offset='100'>Latest</AnchorLink></li>}
               <li><AnchorLink href='#contact'>Contact</AnchorLink></li>
+              <li><AnchorLink href='#top' offset='76'>Top</AnchorLink></li>
+
             </ul>
             <div className="mobile-nav">
 
@@ -47,14 +54,10 @@ class Header extends React.Component {
 
               <div className="mobile-nav__menu-container">
                 <ul className="mobile-nav__menu">
-
-                  <li><AnchorLink href='#top' onClick={this.closeMenu} offset='100'>Home</AnchorLink></li>
-                  <li><AnchorLink href='#about' onClick={this.closeMenu} offset='100'>About</AnchorLink></li>
-                  <li><AnchorLink href='#services' onClick={this.closeMenu} offset='120'>Services</AnchorLink></li>
-                  <li><AnchorLink href='#portfolio' onClick={this.closeMenu} offset='100'>Portfolio</AnchorLink></li>
-                  <li><Link to='/blog'>Blog</Link></li>
-                  <li><AnchorLink href='#contact' onClick={this.closeMenu} offset='100'>Contact</AnchorLink></li>
-
+                  <li><Link to='/'>Home</Link></li>
+                  { isBlogPost && <li><Link to='/blog'>Blog</Link></li> }
+                  <li><AnchorLink href='#contact'>Contact</AnchorLink></li>
+                  <li><AnchorLink href='#top' offset='76'>Top</AnchorLink></li>
                 </ul>
               </div>
 
@@ -62,12 +65,16 @@ class Header extends React.Component {
           </div>
         </nav>
         <div className="Header__text-container">
-          <p className="Header__title">Shuttered</p>
+          <h1 className="Header__title">
+            {isBlogPost ? this.props.title : 'Shuttered Blog'}
+          </h1>
           <div className="divider"></div>
-          <p className="Header__subtitle">Photography Studio</p>
+          <p className="Header__subtitle">
+            {isBlogPost ? this.props.subtitle : 'Cool and Unique Photography Tips'}
+          </p>
         </div>
       </header>
     )
   }
 };
-export default Header;
+export default BlogHeader;

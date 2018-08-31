@@ -4,6 +4,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-121296920-2",
+        head: false,
+        anonymize: true,
+        respectDNT: true
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,

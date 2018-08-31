@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
   &__nav {
     position: absolute;
     top: 0; right: 0; left: 0;
@@ -53,8 +52,6 @@
     margin-top: 10px;
   }
 
-  .mobile-nav { display: none; }
-
   @include whenMedium {
 
     &__nav {
@@ -65,9 +62,44 @@
       }
       li { margin-left: 0; }
     }
-    .mobile-nav { display: flex; }
+  }
+
+
+  &--blog {
+    height: 540px;
+    margin-top: 76px;
+    background-image:
+    linear-gradient(rgba($color-body, .85), rgba($color-body, .85)),
+     url('../images/blog-header.jpeg');
+    nav {
+      background: $color-body;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 99;
+    }
+    .Header__title {
+      font-size: 5rem;
+    }
+  }
+  &--blog-post {
+    .Header__text-container {
+      max-width: 660px;
+    }
+    .Header__title {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+
+    }
+    .Header__subtitle {
+      font-size: 2.2rem;
+    }
   }
 }
+
+
+
 
 
 
@@ -184,5 +216,9 @@
     span:nth-last-child(1) {
       transform: rotate(-45deg) translate(0px, 3px);
     }
+  }
+
+  @include whenMedium {
+    display: flex;
   }
 }

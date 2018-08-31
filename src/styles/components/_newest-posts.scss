@@ -26,6 +26,9 @@
     flex-direction: column;
     justify-content: space-between;
     border-bottom: 3px solid $color-gray-l;
+    .gatsby-image-wrapper {
+      max-height: 200px;
+    }
     &:hover .post__title {
       color: $color-accent;
     }
@@ -49,10 +52,14 @@
       flex-direction: column;
       max-width: 460px;
     }
+
     .post {
       margin: 0 0 50px 0;
       &:last-of-type {
         margin-bottom: 0;
+      }
+      .gatsby-image-wrapper {
+        max-height: 300px;
       }
     }
   }

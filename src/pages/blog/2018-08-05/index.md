@@ -1,9 +1,10 @@
 ---
 path: "/blog/ten-photograpy-tips"
-date: "2018-8-15"
+date: "2018-08-05"
 title: "Ten Photography Tips"
 author: "Tawnee"
 featuredImage: "./guitar.jpeg"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 ---
 
 ## Aug 30 - Sept 1
