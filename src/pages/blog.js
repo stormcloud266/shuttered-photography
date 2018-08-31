@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 const BlogPage = ({ data }) => (
   <Layout>
     <BlogHeader blogPost={false}/>
+    {console.log(data)}
     <section className="BlogPage wrapper">
       <h1 className="BlogPage__title title-underline" id="latest">Latest Posts</h1>
 
@@ -34,9 +35,9 @@ const BlogPage = ({ data }) => (
 
 export default BlogPage
 
+
 export const query = graphql`
   query BlogIndexQuery {
-
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
@@ -44,19 +45,17 @@ export const query = graphql`
           frontmatter {
             title
             path
-            date
-            author
             description
             featuredImage {
-              childImageSharp{
-                 sizes(maxWidth: 930) {
-                   ...GatsbyImageSharpSizes
-               }
-             }
+              childImageSharp {
+                sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
             }
           }
         }
       }
     }
-}
+  }
 `

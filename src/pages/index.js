@@ -85,16 +85,31 @@ export const query = graphql`
             path
             date
             author
-            featuredImage {
-              childImageSharp{
-                 sizes(maxWidth: 930) {
-                   ...GatsbyImageSharpSizes
-               }
-             }
-            }
           }
         }
       }
     }
   }
 `
+
+
+// allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//   edges {
+//     node {
+//       id
+//       frontmatter {
+//         title
+//         path
+//         date
+//         author
+//         featuredImage {
+//           childImageSharp{
+//              sizes(maxWidth: 930) {
+//                ...GatsbyImageSharpSizes
+//            }
+//          }
+//         }
+//       }
+//     }
+//   }
+// }
