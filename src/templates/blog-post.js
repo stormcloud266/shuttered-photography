@@ -11,7 +11,7 @@ export default function Template({ data }) {
       <BlogHeader
         title={post.frontmatter.title}
         subtitle={post.frontmatter.description}
-        // img={post.frontmatter.featuredImage.childImageSharp.sizes.src}
+        img={post.frontmatter.featuredImage.childImageSharp.sizes.src}
         blogPost={true}
       />
       <div className="BlogPost__content">
@@ -33,28 +33,14 @@ export const postQuery = graphql`
         author
         date
         description
+        featuredImage {
+          childImageSharp{
+             sizes(maxWidth: 1000) {
+               ...GatsbyImageSharpSizes
+           }
+         }
+        }
       }
     }
   }
 `
-// export const postQuery = graphql`
-//   query BlogPostByPath($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path }}) {
-//       html
-//       frontmatter {
-//         path
-//         title
-//         author
-//         date
-//         description
-//         featuredImage {
-//           childImageSharp{
-//              sizes(maxWidth: 1000) {
-//                ...GatsbyImageSharpSizes
-//            }
-//          }
-//         }
-//       }
-//     }
-//   }
-// `
