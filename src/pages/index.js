@@ -11,20 +11,20 @@ import Footer from '../components/Footer';
 
 import { graphql } from 'gatsby'
 
+function handleScriptLoad() {
+  if (typeof window !== `undefined` && window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+  window.netlifyIdentity.init();
+}
 
 class IndexPage extends React.Component {
-  function handleScriptLoad() {
-  	if (typeof window !== `undefined` && window.netlifyIdentity) {
-  		window.netlifyIdentity.on('init', user => {
-  			if (!user) {
-  				window.netlifyIdentity.on('login', () => {
-  					document.location.href = '/admin/';
-  				});
-  			}
-  		});
-  	}
-  	window.netlifyIdentity.init();
-  }
   render() {
     const newestPosts = this.props.data.allMarkdownRemark.edges.slice(0, 3)
 
