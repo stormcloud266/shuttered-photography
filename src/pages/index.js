@@ -84,7 +84,6 @@ export const query = graphql`
             title
             path
             date
-            author
             featuredImage {
               childImageSharp {
                 sizes(maxWidth: 930) {
