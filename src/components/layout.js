@@ -32,8 +32,9 @@ const Layout = ({ children, data }) => (
             { name:"twitter:card", content: "summary_large_image" },
             { name: "twitter:title", content: "Shuttered Photography Studio"},
             { name:"twitter:description", content:"Timeless photography for non-existent people."},
-            { name:"twitter:image", content: `https://naughty-khorana-38a3bb.netlify.com/${headerJPG}` }
-          ]}
+            { name:"twitter:image", content: `https://naughty-khorana-38a3bb.netlify.com/${headerJPG}` },
+          ]},
+          script={[{type:"text/javascript", src:"https://identity.netlify.com/v1/netlify-identity-widget.js"}]}
         >
           <html lang="en" />
         </Helmet>
