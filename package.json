@@ -16,6 +16,7 @@
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-netlify": "^2.0.0-rc.1",
     "gatsby-plugin-netlify-cms": "^3.0.0-rc.1",
+    "gatsby-plugin-netlify-cms-paths": "^1.0.2",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sass": "^2.0.0-rc.1",
