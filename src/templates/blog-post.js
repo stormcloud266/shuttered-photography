@@ -8,6 +8,7 @@ export default function Template({ data }) {
 
   return (
     <div className="BlogPost">
+      {console.log(data)}
       <BlogHeader
         title={post.frontmatter.title}
         subtitle={post.frontmatter.description}

@@ -19,13 +19,13 @@ class BlogHeader extends React.Component {
 
   render() {
     const isBlogPost = this.props.blogPost
-    // const headerBg = isBlogPost && `linear-gradient(rgba(20,19,17,.9), rgba(20,19,17,.9)), url(${this.props.img})`
+    const headerBg = isBlogPost && `linear-gradient(rgba(20,19,17,.9), rgba(20,19,17,.9)), url(${this.props.img})`
 
     return (
       <header
         className={`Header Header--blog ${this.props.blogPost && 'Header--blog-post'}`}
         id="top"
-        // style={{ backgroundImage: headerBg }}
+        style={{ backgroundImage: headerBg }}
       >
         <nav className="Header__nav">
           <div className="Header__nav-inner wrapper">
