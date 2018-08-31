@@ -1,4 +1,5 @@
 const path = require('path');
+require("babel-polyfill");
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = ({ actions, graphql }) => {
