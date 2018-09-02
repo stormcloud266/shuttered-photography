@@ -49,4 +49,28 @@
       color: $color-accent;
     }
   }
+
+  @include whenMedium {
+    margin-bottom: 10rem;
+    margin-top: 6rem;
+
+    &__grid {
+      max-width: 600px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-rows: auto;
+    }
+
+    &__grid-item {
+      grid-column: auto !important;
+      .gatsby-image-wrapper {
+        height: auto;
+        max-height: 260px !important;
+      }
+    }
+  }
+  @include whenSmall {
+    // background: darkgreen;
+  }
 }
