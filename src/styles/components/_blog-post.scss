@@ -16,12 +16,21 @@
       font-family: $serif;
       font-weight: 400;
       margin-bottom: 20px;
+      padding-top: 20px;
     }
     h2 { font-size: 2.8rem }
 
     p {
       margin-bottom: 30px;
       color: $color-text-m;
+    }
+    li {
+      color: $color-text-m;
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+    ul, ol {
+      margin-bottom: 20px;
     }
   }
 

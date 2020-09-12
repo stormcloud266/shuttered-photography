@@ -9,15 +9,19 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
     grid-gap: 20px;
   }
 
   &__grid-item {
     background: $color-gray;
+    display: flex;
+    flex-direction: column;
+
     .gatsby-image-wrapper {
       height: 200px;
+      overflow: hidden;
     }
+
     &:nth-of-type(1), &:nth-of-type(7n) {
       grid-column: 1 / 3;
       .gatsby-image-wrapper {
@@ -26,7 +30,7 @@
 
       }
     }
-    &:nth-of-type(6n), {
+    &:nth-of-type(6n) {
       grid-column: 3 / 5;
       .gatsby-image-wrapper {
         height: auto;
@@ -38,6 +42,12 @@
 
   &__grid-text {
     padding: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+
     h2 {
       font-size: 2.2rem;
     }
@@ -70,7 +80,5 @@
       }
     }
   }
-  @include whenSmall {
-    // background: darkgreen;
-  }
+
 }

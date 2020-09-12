@@ -18,8 +18,10 @@ const BlogPage = ({ data }) => (
           <div key={post.node.id} className="BlogPage__grid-item">
             <Img sizes={post.node.frontmatter.featuredImage.childImageSharp.sizes} />
             <div className="BlogPage__grid-text">
-              <h2>{post.node.frontmatter.title}</h2>
-              <p>{post.node.frontmatter.description}</p>
+              <div>
+                <h2>{post.node.frontmatter.title}</h2>
+                <p>{post.node.frontmatter.description}</p>
+              </div>
               <Link to={post.node.frontmatter.path}>Read More</Link>
             </div>
           </div>
