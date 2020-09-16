@@ -1,5 +1,5 @@
 # Shuttered Photography
-A simple, clean photography portfolio site with a dark UI. Features a blog connected to Netlify's CMS, lazy loaded images, and a contact form.
+A simple, clean photography portfolio concept site with a dark UI. Features a blog connected to Netlify's CMS, lazy loaded images, and a contact form.
 
 [View Website](https://shuttered-photography.netlify.app/)
 
