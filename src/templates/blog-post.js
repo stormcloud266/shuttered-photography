@@ -1,26 +1,29 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import BlogHeader from '../components/BlogHeader'
+import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div className="BlogPost">
-      {console.log(data)}
-      <BlogHeader
-        title={post.frontmatter.title}
-        subtitle={post.frontmatter.description}
-        img={post.frontmatter.featuredImage.childImageSharp.sizes.src}
-        blogPost={true}
-      />
-      <div className="BlogPost__content">
-        <div className="content__inner" dangerouslySetInnerHTML={{__html: post.html}} />
-      </div>
+    <Layout>
+      <div className="BlogPost">
+        <BlogHeader
+          title={post.frontmatter.title}
+          subtitle={post.frontmatter.description}
+          img={post.frontmatter.featuredImage.childImageSharp.sizes.src}
+          blogPost={true}
+        />
+        <div className="BlogPost__content">
+          <div className="content__inner" dangerouslySetInnerHTML={{__html: post.html}} />
+        </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Layout>
+    
   )
 }
 
