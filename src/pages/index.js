@@ -41,7 +41,7 @@ class IndexPage extends React.Component {
           ser1={this.props.data.ser1}
           ser2={this.props.data.ser2}
         />
-        <Portfolio gr1={this.props.data.gr1} />
+        <Portfolio />
         <NewestPosts posts={newestPosts}/>
         <Footer />
       </Layout>
@@ -58,21 +58,14 @@ export const query = graphql`
     ser1: file(relativePath: { regex: "/images/ser1/" }) {
       childImageSharp {
         resolutions(height: 560) {
-          ...GatsbyImageSharpResolutions
+          ...GatsbyImageSharpResolutions_withWebp_tracedSVG
         }
       }
     },
     ser2: file(relativePath: { regex: "/images/ser2/" }) {
       childImageSharp {
         resolutions(height: 560) {
-          ...GatsbyImageSharpResolutions
-        }
-      }
-    },
-    gr1: file(relativePath: { regex: "/images/gr1/" }) {
-      childImageSharp {
-        sizes(maxHeight: 300) {
-          ...GatsbyImageSharpSizes
+          ...GatsbyImageSharpResolutions_withWebp_tracedSVG
         }
       }
     },
@@ -87,7 +80,7 @@ export const query = graphql`
             featuredImage {
               childImageSharp {
                 sizes(maxWidth: 930) {
-                  ...GatsbyImageSharpSizes
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }
             }
