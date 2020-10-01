@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import BlogHeader from '../components/BlogHeader'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import Footer from '../components/Footer'
 
 export default function Template({ data }) {
